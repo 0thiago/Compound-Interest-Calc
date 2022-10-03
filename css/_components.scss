@@ -26,7 +26,6 @@
   font-size: 18px;
   text-align: center;
   color: var(--secondary-color-dark);
-  // text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.366);
   padding: 20px 10px;
   text-transform: uppercase;
 }
@@ -54,15 +53,13 @@ input {
   left: 25%;
   background: #0000;
   height: 50px;
-  width: 40vw;
-  // padding-left: 50px;
+  width: 40vw;  
   margin: 0 auto;
 
   .loading-bar {
     background: #fff;
     justify-content: flex-start;
     border-radius: 100px;
-    // border: 2px solid var(--secondary-color-dark);
     align-items: center;
     padding: 0 5px;
     display: flex;
@@ -81,7 +78,6 @@ input {
     &-value {
       display: flex;
       animation: load 5s normal forwards;
-      // box-shadow: 0 10px 40px -10px #fff;
       border: 2px solid var(--secondary-color-dark);
       border-radius: 20px;
       background: var(--secondary-color-light);
@@ -118,14 +114,6 @@ input {
     position: absolute;
     top: 170px;
     left: 25%;
-    .loading-bar {
-      &-value {
-        height: 20px;
-      }
-      & p {
-        padding: 5px;
-      }
-    }
   }  
 }
 
@@ -135,14 +123,6 @@ input {
     position: absolute;
     top: 155px;
     left: 25%;
-    .loading-bar {
-      &-value {
-        height: 20px;
-      }
-      & p {
-        padding: 5px;
-      }
-    }
   }  
 }
 
@@ -152,14 +132,6 @@ input {
     position: absolute;
     top: 50px;
     left: 25%;
-    .loading-bar {
-      &-value {
-        height: 20px;
-      }
-      & p {
-        padding: 5px;
-      }
-    }
   }  
 }
 
@@ -169,13 +141,5 @@ input {
     position: relative;
     top: 0;
     left: 0;
-    .loading-bar {
-      &-value {
-        height: 20px;
-      }
-      & p {
-        padding: 5px;
-      }
-    }
   }  
 }

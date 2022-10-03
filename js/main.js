@@ -86,9 +86,7 @@ const calculateCompoundInterest = {
       result: this.$finalValue
     }
     
-    const inputDataAndResultJSON = JSON.stringify(inputDataAndResult)
-
-    
+    const inputDataAndResultJSON = JSON.stringify(inputDataAndResult)    
 
     localStorage.setItem('inputDataAndResult', inputDataAndResultJSON)
 
@@ -188,5 +186,4 @@ const calculateCompoundInterest = {
     },
   }
 }
-
 calculateCompoundInterest.init()

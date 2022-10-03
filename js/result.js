@@ -38,8 +38,7 @@ let showResult = () => {
 
 showResult()
 
-const sendResultToUser = {
-  
+const sendResultToUser = {  
   init: function() {
     this.cacheSelector()
     this.bindEvents()
@@ -83,6 +82,5 @@ const sendResultToUser = {
     }
   }
 }
-
 sendResultToUser.init()
 
