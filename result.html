@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest - Result</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="imgs/calculator-color.png" type="image/x-icon">
+</head>
+
+<body>
+  <header class="header">
+
+    <img class="header__logo" src="imgs/percent.png" alt="logo">
+
+    <h1 class="header__title">Calculax</h1>
+
+    <div class="placeholder"></div>
+
+    <img id="showMenuButton" class="header__menu-button" src="imgs/menu.png" alt="menu button">
+
+      <nav class="navmenu-container">
+        <ul id="menuContainer" class="navmenu-container">
+          <div id="onfocusedBody" class="navmenu-container--onfocused"></div>
+
+          <div class="navmenu">
+
+            <li id="closeMenuButton" class="close-menu">X</li>
+            <li class="navmenu-item"><a href="#home">Home</a></li>
+            <li class="navmenu-item"><a href="#products">Products</a> <span>
+              <</span>
+              <ul class="navmenu-item__sub-menu">
+                <li class="navmenu-item"><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li>
+                <li class="navmenu-item"><a href="#">Product 2</a></li>
+                <li class="navmenu-item"><a href="#products3">Product 3</a></li>
+                <li class="navmenu-item"><a href="#products4">Product 4</a></li>
+              </ul>
+            </li>
+            <li class="navmenu-item"><a href="#about_us">About Us</a></li>
+          </div>
+
+        </ul>
+
+      </nav>
+
+  </header>
+  <main class="result">
+
+    <h1 class="title">Result:</h1>
+
+    <section id="resultContainerHTML" class="result__main-content">
+      <!-- section build by showResult() -->
+    </section>
+
+    <p>Do you want save this result?</p>
+    <p>Inform us your e-mail and we will send it for you!</p>
+
+    <form id="sendResultToUser" class="result__form" action="#">
+
+      <div class="result__form-email-container">
+        <label for="inputEmail">E-mail:</label>
+        <input type="email" id="inputEmail" name="inputEmail">        
+      </div>
+
+      <div id="invalid-field" class="invalid-field"></div>
+
+      <button id="sendButton" class="button">Please, e-mail me this result</button>
+
+    </form>
+
+  </main>
+  <footer class="footer">
+    <p>Testing your skills in HTML, CSS and Javascript.</p>
+  </footer>
+</body>
+<script src="js/result.js"></script>
+</html>

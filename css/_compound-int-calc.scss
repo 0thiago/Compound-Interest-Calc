@@ -1,0 +1,27 @@
+.compound-int-calc {  
+  .form {
+    >div {
+      background-color: rgb(225, 225, 225);
+      display: flex;
+      margin:  20px;
+      padding: 10px;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid black;
+      border-radius: 5px;
+    }
+
+
+    &__monthly-contribution-container {
+      border-top: 1px solid black;
+    }
+
+    &__buttons-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2vw;
+      padding: 0 20px;
+    }
+  }
+}

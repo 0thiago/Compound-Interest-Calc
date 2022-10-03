@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compound Interest Calculator</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="imgs/calculator-color.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <header class="header">
+
+    <img class="header__logo" src="imgs/percent.png" alt="logo">
+
+    <h1 class="header__title">Calculax</h1>
+
+    <div class="placeholder"></div>
+
+    <img id="showMenuButton" class="header__menu-button" src="imgs/menu.png" alt="menu button">
+
+      <nav class="navmenu-container">
+        <ul id="menuContainer" class="navmenu-container">
+          <div id="onfocusedBody" class="navmenu-container--onfocused"></div>
+
+          <div class="navmenu">
+
+            <li id="closeMenuButton" class="close-menu">X</li>
+            <li class="navmenu-item"><a href="#home">Home</a></li>
+            <li class="navmenu-item"><a href="#products">Products</a> <span>
+              <</span>
+              <ul class="navmenu-item__sub-menu">
+                <li class="navmenu-item"><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li>
+                <li class="navmenu-item"><a href="#">Product 2</a></li>
+                <li class="navmenu-item"><a href="#products3">Product 3</a></li>
+                <li class="navmenu-item"><a href="#products4">Product 4</a></li>
+              </ul>
+            </li>
+            <li class="navmenu-item"><a href="#about_us">About Us</a></li>
+          </div>
+
+        </ul>
+
+      </nav>
+
+  </header>
+
+  <main class="compound-int-calc">
+
+    <h1 class="main__content-title title">Compound Interest Calculator</h1>
+
+    <p>Calculate how much your investment can grow using the strenght of compound interest. </p>
+    <div class="invalid-field"></div>
+
+    <form id="form" action="result.html">
+
+      <div class="form">
+
+        <div class="form__monthly-contribution-container">
+          <label for="inputMonthlyContribution">Monthly Contribution:</label>
+          <input type="text" name="inputMonthlyContribution" id="inputMonthlyContribution" inputmode="numeric">
+        </div>
+
+        <div class="form__interest-rate-container">
+          <label for="inputInterestRate">Monthly Interest Rate:</label>
+          <input type="text" name="inputInterestRate" id="inputInterestRate" pattern="\d*">
+          
+        </div>
+
+        <div class="form__length-time-container">
+          <label for="lengthOfTime">Length of Time in Months:</label>
+          <input type="text" name="lengthOfTime" id="lengthOfTime" pattern="\d*">
+        </div>
+
+      </div>
+
+      <div class="form__buttons-container">
+        <div id="loadingBar" class="loading-bar_box">
+          <div class="loading-bar">
+            <div class="loading-bar-value"><p>Loading...</p></div>
+            
+          </div>
+        </div>
+        <button id="calculateButton" class="button">Calculate</button>
+        <button id="resetButton" class="button">Reset</button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p>Testing your skills in HTML, CSS and Javascript.</p>
+  </footer>
+
+</body>
+<script src="js/main.js"></script>
+
+</html>

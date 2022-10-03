@@ -1,0 +1,31 @@
+.compound-int-calc .form > div {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+.compound-int-calc .form input {
+  height: 25px;
+  width: 30vw;
+}
+.compound-int-calc .form__buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2vw;
+  padding: 10px;
+}
+.compound-int-calc .form__buttons-container button {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid rgba(255, 255, 255, 0.3);
+  border-right: 3px solid rgba(0, 0, 0, 0.382);
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.366);
+  text-transform: uppercase;
+  font-family: var(--font);
+  background-color: var(--secondary-color-dark);
+  color: white;
+  padding: 8px 10px;
+}/*# sourceMappingURL=compound-int-calc.css.map */

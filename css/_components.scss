@@ -1,0 +1,144 @@
+.button {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  border-left: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid rgba(255, 255, 255, 0.3);
+  border-right: 3px solid rgba(0, 0, 0, 0.382);
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.366);
+  text-transform: uppercase;
+  font-family: var(--font);
+  background-color: var(--secondary-color-dark);
+  color: white;
+  padding: 8px 20px;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(1.3);
+  }
+
+  &:active {
+    filter: brightness(0.9);
+    box-shadow: inset 1px 1px 2.5px rgba(0, 0, 0, 0.455);
+  }
+}
+
+.title {
+  font-size: 18px;
+  text-align: center;
+  color: var(--secondary-color-dark);
+  // text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.366);
+  padding: 20px 10px;
+  text-transform: uppercase;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+  padding: 0 20px 20px;
+}
+
+input {
+  height: 30px;
+  width: 30vw;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-indent: 10px;
+}
+
+.loading-bar_box {
+  display: none; //flex
+  justify-content: center;
+  align-items: center;
+  background: #0000;
+  height: 50px;
+  width: 210px;
+  padding-left: 50px;
+  margin: 0 auto;
+
+  .loading-bar {
+    background: #fff;
+    justify-content: flex-start;
+    border-radius: 100px;
+    // border: 2px solid var(--secondary-color-dark);
+    align-items: center;
+    padding: 0 5px;
+    display: flex;
+    height: 40px;
+    width: 500px;
+
+    & p {
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      font-weight: bold;
+      color: var(--secondary-color-dark);
+    }
+
+    &-value {
+      display: flex;
+      animation: load 5s normal forwards;
+      // box-shadow: 0 10px 40px -10px #fff;
+      border: 2px solid var(--secondary-color-dark);
+      border-radius: 20px;
+      background: var(--secondary-color-light);
+      height: 25px;
+      width: 10px;
+    }
+  }
+}
+
+@keyframes load { //for loading-bar_box
+  0% {
+    width: 80px;
+  }
+
+  100% {
+    width: 98%;
+  }
+}
+
+.invalid-field {
+  margin: -10px 0 10px;
+  width: 100%;
+  text-align: center;
+  color: red;
+  font-size: 14px;
+}
+
+.invalid-input {
+  border: 2px solid red;
+}
+
+@media screen and (max-width: 329px) {
+  .loading-bar_box {
+    position: absolute;
+    top: 185px;
+    left: 10%;
+    .loading-bar {
+      &-value {
+        height: 20px;
+      }
+      & p {
+        padding: 5px;
+      }
+    }
+  }  
+}
+
+@media screen 
+  and (max-width: 420px) {
+  .loading-bar_box {
+    position: absolute;
+    top: 145px;
+    left: 10%;
+    .loading-bar {
+      &-value {
+        height: 20px;
+      }
+      & p {
+        padding: 5px;
+      }
+    }
+  }  
+}
