@@ -109,7 +109,7 @@ const calculateCompoundInterest = {
       headers: { 'Content-Type': 'application/json' }
     }
 
-    fetch('http://api.mathjs.org/v4/', headers)
+    fetch('https://api.mathjs.org/v4/', headers)
       .then(this.convertFromJSON)
       .then(this.calcResult.bind(this))
       .catch(this.showError.bind(this))
