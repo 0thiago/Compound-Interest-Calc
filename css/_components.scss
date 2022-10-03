@@ -46,13 +46,16 @@ input {
 }
 
 .loading-bar_box {
-  display: none; //flex
+  display: flex; //flex
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 180px;
+  left: 25%;
   background: #0000;
   height: 50px;
-  width: 210px;
-  padding-left: 50px;
+  width: 40vw;
+  // padding-left: 50px;
   margin: 0 auto;
 
   .loading-bar {
@@ -63,14 +66,14 @@ input {
     align-items: center;
     padding: 0 5px;
     display: flex;
-    height: 40px;
+    height: 20px;
     width: 500px;
 
     & p {
       font-size: 13px;
       display: flex;
       align-items: center;
-      padding: 10px;
+      padding: 5px;
       font-weight: bold;
       color: var(--secondary-color-dark);
     }
@@ -82,7 +85,7 @@ input {
       border: 2px solid var(--secondary-color-dark);
       border-radius: 20px;
       background: var(--secondary-color-light);
-      height: 25px;
+      height: 20px;
       width: 10px;
     }
   }
@@ -110,11 +113,11 @@ input {
   border: 2px solid red;
 }
 
-@media screen and (max-width: 329px) {
+@media screen and (min-width: 329px) {
   .loading-bar_box {
     position: absolute;
-    top: 185px;
-    left: 10%;
+    top: 170px;
+    left: 25%;
     .loading-bar {
       &-value {
         height: 20px;
@@ -127,11 +130,45 @@ input {
 }
 
 @media screen 
-  and (max-width: 420px) {
+  and (min-width: 330px) {
   .loading-bar_box {
     position: absolute;
-    top: 145px;
-    left: 10%;
+    top: 155px;
+    left: 25%;
+    .loading-bar {
+      &-value {
+        height: 20px;
+      }
+      & p {
+        padding: 5px;
+      }
+    }
+  }  
+}
+
+@media screen 
+  and (min-width: 353px) {
+  .loading-bar_box {
+    position: absolute;
+    top: 50px;
+    left: 25%;
+    .loading-bar {
+      &-value {
+        height: 20px;
+      }
+      & p {
+        padding: 5px;
+      }
+    }
+  }  
+}
+
+@media screen 
+  and (min-width: 420px) {
+  .loading-bar_box {
+    position: relative;
+    top: 0;
+    left: 0;
     .loading-bar {
       &-value {
         height: 20px;
