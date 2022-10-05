@@ -1,22 +1,4 @@
-function toggleMenu() {
-
-  let closeMenuButton = document.querySelector('#closeMenuButton')
-  let showMenuButton = document.querySelector('#showMenuButton')
-  let menu = document.querySelector('#menuContainer')
-  let onfocusedBody = document.querySelector('#onfocusedBody')
-
-  onfocusedBody.onclick = () => {
-    menu.classList.remove('show')
-  }
-
-  showMenuButton.onclick = () => {
-    menu.classList.add('show')
-  }
-
-  closeMenuButton.onclick = () => {
-    menu.classList.remove('show')
-  }
-}
+import toggleMenu from './toggleMenu.js'
 
 toggleMenu()
 
@@ -88,10 +70,11 @@ const calculateCompoundInterest = {
     
     const inputDataAndResultJSON = JSON.stringify(inputDataAndResult)    
 
+    console.log(inputDataAndResult)
+
     localStorage.setItem('inputDataAndResult', inputDataAndResultJSON)
 
     this.$form.submit()
-    this.displayLoading()
 
   },
 
@@ -136,6 +119,8 @@ const calculateCompoundInterest = {
 
     validateData: function (event) {
       event.preventDefault()
+
+      this.displayLoading()
 
       let hasError = false
 

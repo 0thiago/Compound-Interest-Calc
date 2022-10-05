@@ -39,6 +39,7 @@ p {
 input {
   height: 30px;
   width: 30vw;
+  max-width: 150px;
   border: 1px solid black;
   border-radius: 3px;
   text-indent: 10px;
@@ -48,12 +49,13 @@ input {
   display: none; //flex
   justify-content: center;
   align-items: center;
-  position: absolute;
-  top: 180px;
-  left: 25%;
+  position: relative;
+  top: 0;
+  left: 0;
   background: #0000;
   height: 50px;
-  width: 40vw;  
+  width: 50px;
+  max-width: 348px;
   margin: 0 auto;
 
   .loading-bar {
@@ -77,7 +79,7 @@ input {
 
     &-value {
       display: flex;
-      animation: load 5s normal forwards;
+      animation: load 3s ease-out forwards;
       border: 2px solid var(--secondary-color-dark);
       border-radius: 20px;
       background: var(--secondary-color-light);
@@ -87,9 +89,11 @@ input {
   }
 }
 
-@keyframes load { //for loading-bar_box
+@keyframes load {
+
+  //for loading-bar_box
   0% {
-    width: 80px;
+    width: 0px;
   }
 
   100% {
@@ -107,39 +111,4 @@ input {
 
 .invalid-input {
   border: 2px solid red;
-}
-
-@media screen and (min-width: 329px) {
-  .loading-bar_box {
-    position: absolute;
-    top: 170px;
-    left: 25%;
-  }  
-}
-
-@media screen 
-  and (min-width: 330px) {
-  .loading-bar_box {
-    position: absolute;
-    top: 155px;
-    left: 25%;
-  }  
-}
-
-@media screen 
-  and (min-width: 353px) {
-  .loading-bar_box {
-    position: absolute;
-    top: 50px;
-    left: 25%;
-  }  
-}
-
-@media screen 
-  and (min-width: 420px) {
-  .loading-bar_box {
-    position: relative;
-    top: 0;
-    left: 0;
-  }  
 }

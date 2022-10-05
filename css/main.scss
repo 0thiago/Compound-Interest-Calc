@@ -54,8 +54,11 @@ body {
     background-repeat: no-repeat;
   }
 
-  nav {
+  .menubar1024px {
+    display: none;
+  }
 
+  .navmenu-burguer {
     .navmenu-container {
       display: none; //flex
       justify-content: flex-end;
@@ -75,7 +78,6 @@ body {
       &--onfocused {
         background-color: rgba(0, 0, 0, 0.623);
         width: 100vw;
-
       }
 
       .navmenu {
@@ -139,8 +141,7 @@ body {
 }
 
 main {
-  padding-bottom: 20px
-  
+  padding: 40px 0;
 }
 
 @import 'compound-int-calc';
@@ -155,4 +156,76 @@ main {
   text-align: center;
   color: var(--primary-color-dark);
   padding: 40px 30px 40px;
+}
+
+@media screen and (min-width: 600px) {
+
+  .header__menu-button {
+    right: 30px;
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    justify-content: flex-end;
+    gap: 10vw;
+
+    &__logo {
+      margin-right: 10vw;
+    }
+
+    .menubar1024px {
+      display: flex;
+      justify-content: space-between;
+      width: 286px;
+      margin-left: 100px;
+
+      &__item {
+        text-align: center;
+
+        & a {
+          width: 95px;
+          display: block;
+          color: white;
+          padding: 13px;
+
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.097);
+          }
+        }
+
+        &:hover>.menubar1024px__submenu {
+          display: flex;
+        }
+
+        .menubar1024px__submenu {
+          background-color: var(--primary-color);
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 50px;
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+
+          & a {
+            text-align: left;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .placeholder {
+      display: none;
+    }
+
+    .header__menu-button {
+      display: none;
+    }
+  }
 }

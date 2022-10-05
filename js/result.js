@@ -1,22 +1,4 @@
-function toggleMenu() {
-
-  let closeMenuButton = document.querySelector('#closeMenuButton')
-  let showMenuButton = document.querySelector('#showMenuButton')
-  let menu = document.querySelector('#menuContainer')
-  let onfocusedBody = document.querySelector('#onfocusedBody')
-
-  onfocusedBody.onclick = () => {
-    menu.classList.remove('show')
-  }
-
-  showMenuButton.onclick = () => {
-    menu.classList.add('show')
-  }
-
-  closeMenuButton.onclick = () => {
-    menu.classList.remove('show')
-  }
-}
+import toggleMenu from './toggleMenu.js'
 
 toggleMenu()
 
@@ -24,16 +6,16 @@ let showResult = () => {
   const inputDataAndResultJSON = localStorage.getItem('inputDataAndResult') 
   const inputDataAndResult = JSON.parse(inputDataAndResultJSON)
 
-  inputDataAndResult.lengthOfTime = inputDataAndResult.lengthOfTime/12
+  inputDataAndResult.lengthOfTime = inputDataAndResult.lengthOfTime / 12
   inputDataAndResult.lengthOfTime = inputDataAndResult.lengthOfTime.toString()
   inputDataAndResult.lengthOfTime = inputDataAndResult.lengthOfTime.slice(0, 5)
 
-  $resulContainerHTML = document.querySelector('#resultContainerHTML')
+  let $resultContainerHTML = document.querySelector('#resultContainerHTML')
 
-  $resultHTML = `
+  let $resultHTML = `
     <h4>In <em>${inputDataAndResult.lengthOfTime}</em> year(s),<br>applying <em>$ ${inputDataAndResult.monthlyValue}</em> monthly,<br> under a <em>${inputDataAndResult.interestRate}</em> interest rate,<br> you will have:<br> <span><em>$ ${inputDataAndResult.result}</em> !</span</h4>
-  `
-  $resulContainerHTML.innerHTML = $resultHTML 
+   `
+  $resultContainerHTML.innerHTML = $resultHTML 
 }
 
 showResult()

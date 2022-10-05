@@ -12,7 +12,7 @@
 
 <body>
 
-  <header class="header">
+  <header id="header" class="header">
 
     <img class="header__logo" src="imgs/percent.png" alt="logo">
 
@@ -20,31 +20,47 @@
 
     <div class="placeholder"></div>
 
+    <nav class="menubar1024px__container">
+      <ul class="menubar1024px">
+        <li class="menubar1024px__item"><a href="#">Home</a></li>
+        <li class="menubar1024px__item"><a href="#">Products</a>
+          <ul class="menubar1024px__submenu">
+            <li class="menubar1024px__item"><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li>
+            <li class="menubar1024px__item"><a href="#">Product 1</a></li>
+            <li class="menubar1024px__item"><a href="#">Product 2</a></li>
+            <li class="menubar1024px__item"><a href="#">Product 3</a></li>
+          </ul>
+        </li>
+        <li class="menubar1024px__item"><a href="#">About Us</a></li>
+      </ul>
+    </nav>
+
     <img id="showMenuButton" class="header__menu-button" src="imgs/menu.png" alt="menu button">
 
-      <nav class="navmenu-container">
-        <ul id="menuContainer" class="navmenu-container">
-          <div id="onfocusedBody" class="navmenu-container--onfocused"></div>
+    <nav class="navmenu-burguer">
+      <ul id="menuContainer" class="navmenu-container">
+        <div id="unfocusedBody" class="navmenu-container--onfocused"></div>
 
-          <div class="navmenu">
+        <div class="navmenu">
 
-            <li id="closeMenuButton" class="close-menu">X</li>
-            <li class="navmenu-item"><a href="#home">Home</a></li>
-            <li class="navmenu-item"><a href="#products">Products</a> <span>
-              <</span>
-              <ul class="navmenu-item__sub-menu">
-                <li class="navmenu-item"><a href="compound-interest-calculator.html">Compound Interest Calculator</a></li>
-                <li class="navmenu-item"><a href="#">Product 2</a></li>
-                <li class="navmenu-item"><a href="#products3">Product 3</a></li>
-                <li class="navmenu-item"><a href="#products4">Product 4</a></li>
-              </ul>
-            </li>
-            <li class="navmenu-item"><a href="#about_us">About Us</a></li>
-          </div>
+          <li id="closeMenuButton" class="close-menu">X</li>
+          <li class="navmenu-item"><a href="#home">Home</a></li>
+          <li class="navmenu-item"><a href="#products">Products</a> <span>
+              < </span>
+                <ul class="navmenu-item__sub-menu">
+                  <li class="navmenu-item"><a href="compound-interest-calculator.html">Compound Interest Calculator</a>
+                  </li>
+                  <li class="navmenu-item"><a href="#">Product 2</a></li>
+                  <li class="navmenu-item"><a href="#products3">Product 3</a></li>
+                  <li class="navmenu-item"><a href="#products4">Product 4</a></li>
+                </ul>
+          </li>
+          <li class="navmenu-item"><a href="#about_us">About Us</a></li>
+        </div>
 
-        </ul>
+      </ul>
 
-      </nav>
+    </nav>
 
   </header>
 
@@ -60,7 +76,8 @@
         </div>
         <div class="form__interest-rate-container">
           <label for="inputInterestRate">Monthly Interest Rate:</label>
-          <input type="text" name="inputInterestRate" id="inputInterestRate" inputmode="numeric" placeholder="0.01 = 1%">
+          <input type="text" name="inputInterestRate" id="inputInterestRate" inputmode="numeric"
+            placeholder="0.01 = 1%">
         </div>
         <div class="form__length-time-container">
           <label for="lengthOfTime">Length of Time in Months:</label>
@@ -70,7 +87,9 @@
       <div class="form__buttons-container">
         <div id="loadingBar" class="loading-bar_box">
           <div class="loading-bar">
-            <div class="loading-bar-value"><p>Loading...</p></div>            
+            <div class="loading-bar-value">
+              <p>Loading...</p>
+            </div>
           </div>
         </div>
         <button id="calculateButton" class="button">Calculate</button>
@@ -84,6 +103,6 @@
   </footer>
 
 </body>
-<script src="js/main.js"></script>
+<script type="module" src="js/main.js"></script>
 
 </html>
